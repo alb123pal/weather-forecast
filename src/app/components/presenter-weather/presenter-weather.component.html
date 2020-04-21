@@ -1,0 +1,7 @@
+<div class="presenter-wrapper">
+  <div class="speech-bubble" *ngIf="isShowBubble">
+    <p>{{ presenterSpeechText }}</p>
+    <span class="speech-bubble__close-button" (click)="closeBubble()"></span>
+  </div>
+  <div class="presenter"></div>
+</div>

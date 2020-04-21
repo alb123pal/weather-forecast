@@ -1,0 +1,58 @@
+.weather-info-container {
+  display: grid;
+  column-gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .weather-card {
+    background: url('../../../assets/sky.jpg') no-repeat center center fixed;
+    border: 2px solid #17345e;
+
+    &-header {
+      display: flex;
+      justify-content: center;
+    }
+    display: grid;
+    &__icon {
+      height: 84px;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: auto;
+      background-size: 150%;
+    }
+
+    .weather-details {
+      &-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      &__digit {
+        font-size: 22px;
+        margin-left: 10px;
+      }
+      &__min-temp {
+        height: 45px;
+        background-color: #74b0f7;
+
+      }
+      &__max-temp {
+        height: 45px;
+        background-color: #dd8a43;
+
+      }
+      &__humidity {
+        background-color: #596c88;
+      }
+    }
+  }
+  .mat-card-header .mat-card-title {
+    text-align: center;
+  }
+}
+
+

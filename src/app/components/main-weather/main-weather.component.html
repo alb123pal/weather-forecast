@@ -1,0 +1,15 @@
+<div class="weather-forecast">
+  <app-header></app-header>
+  <div class="weather-forecast__form">
+    <form [formGroup]="weatherForm">
+      <mat-form-field class="example-full-width weather-forecast__input">
+        <mat-label>Provide city name</mat-label>
+        <input matInput formControlName="city" placeholder="City">
+      </mat-form-field>
+      <button class="weather-forecast__button" (click)="submitForm()">See weather</button>
+    </form>
+  </div>
+  <app-weather-card [weatherInfo]="weatherInfoList"></app-weather-card>
+  <app-presenter-weather></app-presenter-weather>
+  <app-loader [showLoader]="showLoader"></app-loader>
+</div>

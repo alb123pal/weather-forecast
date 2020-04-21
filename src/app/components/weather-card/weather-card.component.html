@@ -1,0 +1,15 @@
+<div class="weather-info-container">
+  <mat-card class="weather-card" *ngFor="let weather of weatherInfo">
+      <mat-card-header class="weather-card-header">
+        <mat-card-title>{{ weather.dt_txt | getNameOfDay}}</mat-card-title>
+        <mat-card-subtitle> {{ weather.dt_txt | date}}</mat-card-subtitle>
+        <mat-card-subtitle class="weather-card__icon"
+                           [style.background-image]=" weather | getIconUrl"></mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content class="weather-details">
+        <div class="weather-details-info weather-details__min-temp">Min temp: <span class="weather-details__digit">{{weather.main.temp_min}}°C</span></div>
+        <div class="weather-details-info weather-details__max-temp">Max temp: <span class="weather-details__digit">{{weather.main.temp_max}}°C</span></div>
+        <div class="weather-details-info weather-details__humidity">Humidity: <span class="weather-details__digit">{{weather.main.humidity}}%</span></div>
+      </mat-card-content>
+  </mat-card>
+</div>
